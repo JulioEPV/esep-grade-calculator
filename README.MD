@@ -8,6 +8,7 @@ https://github.com/audgster/esep-grade-calculator
 2. Description of the files 
 
 a.	grade_calculator.go  - Define the structure of the calculator. Define its types as Assignment, Exam, and Essay. Define grade structure. Define functions to get the final grade, add a grade, calculate the numerical grade, and compute the average grade.
+
 b.	 grade_calculator_test.go – There are three test cases. The first one expects a grade of A, the second expects a B, and the final test expects a F. Three grades are added for each case. With these values, it calculates the final grade and compares it with the expected values.
 
 
