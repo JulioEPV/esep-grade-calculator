@@ -18,6 +18,7 @@ func TestGetGradeA(t *testing.T) {
 	if expected_value != actual_value {
 		t.Errorf("Expected GetGrade to return '%s'; got '%s' instead", expected_value, actual_value)
 	}
+
 }
 
 func TestGetGradeB(t *testing.T) {
@@ -34,6 +35,7 @@ func TestGetGradeB(t *testing.T) {
 	if expected_value != actual_value {
 		t.Errorf("Expected GetGrade to return '%s'; got '%s' instead", expected_value, actual_value)
 	}
+
 }
 
 func TestGetGradeF(t *testing.T) {
@@ -50,6 +52,7 @@ func TestGetGradeF(t *testing.T) {
 	if expected_value != actual_value {
 		t.Errorf("Expected GetGrade to return '%s'; got '%s' instead", expected_value, actual_value)
 	}
+
 }
 
 func TestGetGradeC(t *testing.T) {
@@ -66,6 +69,7 @@ func TestGetGradeC(t *testing.T) {
 	if expected_value != actual_value {
 		t.Errorf("Expected GetGrade to return '%s'; got '%s' instead", expected_value, actual_value)
 	}
+
 }
 
 func TestGetGradeD(t *testing.T) {
@@ -82,6 +86,7 @@ func TestGetGradeD(t *testing.T) {
 	if expected_value != actual_value {
 		t.Errorf("Expected GetGrade to return '%s'; got '%s' instead", expected_value, actual_value)
 	}
+
 }
 
 func TestGetGradeFF(t *testing.T) {
@@ -98,6 +103,7 @@ func TestGetGradeFF(t *testing.T) {
 	if expected_value != actual_value {
 		t.Errorf("Expected GetGrade to return '%s'; got '%s' instead", expected_value, actual_value)
 	}
+
 }
 
 func TestGetGradeZero(t *testing.T) {
@@ -114,6 +120,7 @@ func TestGetGradeZero(t *testing.T) {
 	if expected_value != actual_value {
 		t.Errorf("Expected GetGrade to return '%s'; got '%s' instead", expected_value, actual_value)
 	}
+
 }
 
 func TestGetGradeZeroTwo(t *testing.T) {
@@ -126,6 +133,7 @@ func TestGetGradeZeroTwo(t *testing.T) {
 	if expected_value != actual_value {
 		t.Errorf("Expected GetGrade to return '%s'; got '%s' instead", expected_value, actual_value)
 	}
+
 }
 
 func TestLimits(t *testing.T) {
@@ -150,6 +158,7 @@ func TestLimits(t *testing.T) {
 		if testlimit.expected != actual_value {
 			t.Errorf("Points %d:; expected '%s','%s' instead", testlimit.points, testlimit.expected, actual_value)
 		}
+
 	}
 
 }
@@ -163,8 +172,10 @@ func TestGradeType(t *testing.T) {
 	}
 
 	for _, testType := range tests {
+
 		if testType.gradeType.String() != testType.expected {
 			t.Errorf("Expected %s, instead %s", testType.expected, testType.gradeType.String())
 		}
+
 	}
 }
