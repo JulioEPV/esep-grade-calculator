@@ -11,6 +11,7 @@ type GradeCalculator struct {
 */
 type GradeCalculator struct {
 	grades []Grade
+	mode   string
 }
 
 type GradeType int
@@ -51,6 +52,13 @@ func NewGradeCalculator() *GradeCalculator {
 
 func (gc *GradeCalculator) GetFinalGrade() string {
 	numericalGrade := gc.calculateNumericalGrade()
+
+	if gc.mode == "passorfail" {
+		if numericalGrade >= 70 {
+			return "Pass"
+		}
+		return "Fail"
+	}
 
 	if numericalGrade >= 90 {
 		return "A"
@@ -95,4 +103,8 @@ func computeAverage(grades []Grade, gradeType GradeType) int {
 	}
 
 	return sum / count
+}
+
+func NewGradeCalculatorMode(mode string) *GradeCalculator {
+	return &GradeCalculator{grades: make([]Grade, 0), mode: mode}
 }
